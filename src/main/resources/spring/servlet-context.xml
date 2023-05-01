@@ -6,6 +6,9 @@
 
     <mvc:annotation-driven />
 
+    <!-- 웹 정적 자원 설정 -->
+    <mvc:resources mapping="/assets/**" location="/resources/" />
+
     <!-- jsp 설정 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/" />
@@ -28,7 +31,6 @@
                   value="org.springframework.web.servlet.view.tiles3.TilesView"/>
         <property name="order" value="1" />
     </bean>
-
 
     <context:component-scan base-package="zzyzzy.spring4mvc.semiprojectv4" />
 
