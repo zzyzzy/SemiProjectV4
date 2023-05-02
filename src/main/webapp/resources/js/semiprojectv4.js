@@ -50,6 +50,9 @@ const sendzip = document.querySelector('#sendzip');
 const zipmodal = document.querySelector('#zipmodal');
 const zpmdbtn = document.querySelector('#zpmdbtn');
 const email3 = document.querySelector('#email3');
+const userid = document.querySelector('#userid');
+const uidmsg = document.querySelector('#uidmsg');
+const pwdmsg = document.querySelector('#pwdmsg');
 
 const modal = new bootstrap.Modal(zipmodal, {});
 
@@ -84,7 +87,7 @@ const showzipaddr = (jsons) => {
     jsons = JSON.parse(jsons);
     let addrs = '';
     jsons.forEach(function (data, idx) {
-        let bunji = (data['bunji'] !== 'null') ? data['bunji'] : '';
+        let bunji = (data['bunji'] !== null) ? data['bunji'] : '';
         addrs += `<option>${data['zipcode']} ${data['sido']} 
              ${data['gugun']} ${data['dong']} ${bunji}</option>`;
     });
@@ -136,6 +139,16 @@ dong?.addEventListener('keydown', (e) => {
         e.preventDefault();  // 이벤트 전파방지
     }
 })
+
+userid?.addEventListener('blur', () => {
+    if (userid.value === '') {
+        alert('중복 검색할 아이디를 입력하세요!!');
+        return;
+    }
+    const url = '/join/checkuid?uid=' + userid.value;
+    fetch(url).then(response => response.text())
+        .then(text => alert(text));
+});
 
 
 // ------------------------------- joinok
