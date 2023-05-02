@@ -29,7 +29,7 @@ noagree?.addEventListener('click', () => {
 const chkfrm2 = document.forms.checkfrm2;
 const chk2btn = document.querySelector('#check2btn');
 chk2btn?.addEventListener('click', () => {
-    if (chkfrm2.name2.value === '') alert('이름을 입력하세요!!');
+    if (chkfrm2.name.value === '') alert('이름을 입력하세요!!');
     else if (chkfrm2.jumin1.value === '') alert('주민번호를 입력하세요!!');
     else if (chkfrm2.jumin2.value === '') alert('나머지 주민번호를 입력하세요!!');
     else if (!chkfrm2.chkjumin.checked) alert('주민번호 처리에 동의하세요!!');
@@ -43,6 +43,9 @@ chk2btn?.addEventListener('click', () => {
 // ------------------------------- joinme
 const joinfrm = document.forms.joinfrm;
 const joinbtn = document.querySelector('#joinbtn');
+const dong = document.querySelector('#dong');
+const zipbtn = document.querySelector('#findzipbtn');
+const addrlist = document.querySelector('#addrlist');
 
 joinbtn?.addEventListener('click', ()=>{
     if (joinfrm.userid.value == '') alert('아이디를 입력하세요!!');
@@ -60,5 +63,26 @@ joinbtn?.addEventListener('click', ()=>{
 
 });
 
+const showzipaddr = (jsons) => {
+    //for(idx in jsons) {
+    //    console.log(jsons[idx] );
+    //}
+    jsons = JSON.parse(jsons);
+    let addrs = '';
+    jsons.forEach(function (data, idx) {
+        addrs += `<option>${data['zipcode']} ${data['sido']} 
+                     ${data['gugun']} ${data['dong']}</option>`;
+    });
+    while(addrlist.lastChild) {
+        addrlist.removeChild(addrlist.lastChild);
+    }
+    addrlist.innerHTML = addrs;
+};
+
+zipbtn?.addEventListener('click', ()=> {
+    const url = '/join/zipcode?dong=' + dong.value;
+    fetch(url).then(response => response.text())
+        .then(text => showzipaddr(text));
+});
 
 // ------------------------------- joinok
