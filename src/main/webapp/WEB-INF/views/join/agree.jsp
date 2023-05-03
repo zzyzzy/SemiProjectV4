@@ -402,3 +402,5 @@ Copyright © Kakao Corp. All rights reserved.
     </div>
 
 </div>
+
+<script src="/assets/js/join.js"></script>
