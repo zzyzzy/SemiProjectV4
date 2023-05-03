@@ -166,7 +166,7 @@
                     <div class="col-3">
                         <div class="g-recaptcha"
                              data-sitekey="6LdmIwgbAAAAAPO06Cyw44ZE0pkeDeMHEwVbgiM-"></div>
-                        <input type="hidden" name="g-recaptcha" id="g-recaptcha">
+                        <input type="hidden" name="grecaptcha" id="g-recaptcha">
                     </div>
                 </div>
 
