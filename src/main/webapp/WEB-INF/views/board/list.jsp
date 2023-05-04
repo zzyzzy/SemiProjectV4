@@ -100,6 +100,9 @@
         <div class="offset-2 col-8">
             <nav>
                 <ul class="pagination justify-content-center">
+
+                    <a class="page-link" href="${pglink}1">처음</a></li>
+
                     <c:if test="${cpg - 1 gt 0}"><li class="page-item"></c:if>
                     <c:if test="${cpg - 1 le 0}"><li class="page-item disabled"></c:if>
                         <a class="page-link" href="${pglink}${cpg-1}">이전</a></li>
@@ -115,6 +118,8 @@
                         <c:if test="${(cpg+1) lt cntpg}"><li class="page-item"></c:if>
                         <c:if test="${(cpg+1) gt cntpg}"><li class="page-item disabled"></c:if>
                         <a class="page-link" href="${pglink}${cpg+1}">다음</a></li>
+
+                        <a class="page-link" href="${pglink}${cntpg}">끝</a></li>
                 </ul>
             </nav>
         </div>
