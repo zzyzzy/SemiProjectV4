@@ -1,4 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <div id="main">
     <div class="mt-5">
@@ -49,108 +51,14 @@
                         <th>567</th>
                         <th>1345</th></tr>
 
-                    <tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr>
-                    <tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr><tr><td>1</td>
-                        <td>영화 "슈퍼 마리오 브라더스' 수익 1조원 돌파</td>
-                        <td>닌텐도</td>
-                        <td>2023-05-01</td>
-                        <td>10</td>
-                        <td>100</td></tr>
+                    <c:forEach items="${bdlist}" var="bd">
+                        <tr><td>${bd.bno}</td>
+                            <td>${bd.title}</td>
+                            <td>${bd.userid}</td>
+                            <td>${fn:substring(bd.regdate, 0, 10)}</td>
+                            <td>${bd.thumbs}</td>
+                            <td>${bd.views}</td></tr>
+                    </c:forEach>
 
                 </tbody>
             </table>
