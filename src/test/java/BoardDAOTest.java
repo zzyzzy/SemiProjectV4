@@ -6,6 +6,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import zzyzzy.spring4mvc.semiprojectv4.model.Member;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
@@ -18,6 +21,16 @@ public class BoardDAOTest {
     @Test
     public void selectBoard() {
         assertNotNull( sqlSession.selectList("board.selectBoard") );
+    }
+
+    @Test
+    public void selectFindBoard() {
+        Map<String, Object> params = new HashMap<>();
+        params.put("stbno", 0);
+        params.put("ftype", "titcont");
+        params.put("fkey", "석가");
+
+        assertNotNull( sqlSession.selectList("board.selectFindBoard", params) );
     }
 
 }
