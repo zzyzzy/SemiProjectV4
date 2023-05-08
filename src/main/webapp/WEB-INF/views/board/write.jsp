@@ -20,8 +20,7 @@
     </div>
 
     <div class="row mt-2 offset-2 col-8">
-        <form class="card card-body bg-light"
-            name="bdfrm" id="bdfrm">
+        <form class="card card-body bg-light" name="bdfrm" id="bdfrm">
 
             <div class="row">
                 <label class="col-3 col-form-label text-danger text-end"

@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import zzyzzy.spring4mvc.semiprojectv4.model.Board;
 import zzyzzy.spring4mvc.semiprojectv4.model.Member;
 
 import java.util.HashMap;
@@ -39,6 +40,16 @@ public class BoardDAOTest {
         params.put("fkey", "석가");
 
         assertNotEquals(0, (int)sqlSession.selectOne("board.countFindBoard", params) );
+    }
+
+    @Test
+    public void insertBoard() {
+        Board b = new Board();
+        b.setTitle("테스트입니다");
+        b.setUserid("abc123");
+        b.setContent("아잉~ 냉무, 제곧내~");
+
+        assertEquals(1, (int)sqlSession.insert("board.insertBoard", b));
     }
 
 
