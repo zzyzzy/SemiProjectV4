@@ -30,7 +30,7 @@ public class BoardDAOImpl implements BoardDAO {
 
     @Override
     public int countBoard(Map<String, Object> params) {
-        return 0;
+        return sqlSession.selectOne("board.countFindBoard", params);
     }
 
 }
