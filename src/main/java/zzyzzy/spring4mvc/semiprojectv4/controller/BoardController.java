@@ -51,7 +51,7 @@ public class BoardController {
         String viewPage = "error.tiles";
 
         if (bdsrv.newBoard(bd))
-            viewPage = "redirect:/board/list.tiles";
+            viewPage = "redirect:/board/list?cpg=1";
 
         return viewPage;
     }
