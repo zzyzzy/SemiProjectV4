@@ -57,8 +57,13 @@ public class BoardController {
     }
 
     @GetMapping("/view")
-    public String view() {
-        return "board/view.tiles";
+    public ModelAndView view(String bno) {
+
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("bd", bdsrv.readOneBoard(bno));
+        mv.setViewName("board/view.tiles");
+
+        return mv;
     }
 
 }
