@@ -43,12 +43,14 @@
 
     <div class="row mt-2">
         <div class="row offset-2 col-4">
-            <button type="button" class="btn btn-warning col-4" id="updbtn">
-                <i class="fa fa-pencil"> </i> 수정하기</button>
-            </button>&nbsp;
-            <button type="button" class="btn btn-danger col-4" id="rmvbtn">
-                <i class="fa fa-trash-o"> </i> 삭제하기</button>
-            </button>
+            <c:if test="${not empty sessionScope.UID and sessionScope.UID eq bd.userid}">
+                <button type="button" class="btn btn-warning col-4" id="updbtn">
+                    <i class="fa fa-pencil"> </i> 수정하기</button>
+                </button>&nbsp;
+                <button type="button" class="btn btn-danger col-4" id="rmvbtn">
+                    <i class="fa fa-trash-o"> </i> 삭제하기</button>
+                </button>
+            </c:if>
         </div>
         <div class="col-4 text-end">
             <button type="button" class="btn btn-light" id="listbtn">
